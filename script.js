@@ -22,7 +22,7 @@ const menuItems = [
         category: "fuertes",
         price: "\$34",
         desc: "Corte premium con reducción de vino tinto, trufa negra y puré rústico.",
-        img: "https://pinimg.com"
+        img: "https://i.pinimg.com/1200x/0c/04/b1/0c04b1262e852afe55785f2b01fce9d5.jpg"
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ const menuItems = [
         category: "fuertes",
         price: "\$29",
         desc: "Acompañado de espárragos tiernos, cítricos y reducción de miel silvestre.",
-        img: "https://pinimg.com"
+        img: "https://i.pinimg.com/1200x/02/1c/81/021c8171228d699d6e84dc2c818c0271.jpg"
     },
     {
         id: 5,
@@ -38,7 +38,7 @@ const menuItems = [
         category: "postres",
         price: "\$12",
         desc: "Núcleo líquido de cacao al 70%, helado artesanal de vainilla de Madagascar.",
-        img: "https://pinimg.com"
+        img: "https://i.pinimg.com/736x/5e/7e/fa/5e7efa40ae28c20a6af595c9cb70b9b2.jpg"
     },
     {
         id: 6,
@@ -46,7 +46,7 @@ const menuItems = [
         category: "postres",
         price: "\$10",
         desc: "Textura ligera con notas tropicales, crocante de pistacho y menta fresca.",
-        img: "https://pinimg.com"
+        img: "https://i.pinimg.com/1200x/12/cc/06/12cc06a4527c92a17ae3808143764b34.jpg"
     }
 ];
 
@@ -113,3 +113,27 @@ bookingForm.addEventListener("submit", (e) => {
     alert(`¡Gracias, ${name}! Tu solicitud de reserva para ${guests} personas el día ${date} a las ${time} ha sido procesada con éxito.`);
     bookingForm.reset();
 });
+// Lógica para el Menú Móvil Desplegable
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links li a");
+
+// Alternar la clase 'active' al hacer clic en el botón de hamburguesa
+mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    // Cambia el icono de barras (menu) a una 'X' (cerrar) de forma interactiva
+    const icon = mobileMenu.querySelector("i");
+    icon.classList.toggle("fa-bars");
+    icon.classList.toggle("fa-xmark");
+});
+
+// Cerrar el menú automáticamente cuando el usuario haga clic en una opción
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        const icon = mobileMenu.querySelector("i");
+        icon.classList.add("fa-bars");
+        icon.classList.remove("fa-xmark");
+    });
+});
+

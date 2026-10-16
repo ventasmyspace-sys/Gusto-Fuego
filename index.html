@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gusto & Fuego | Restaurante Gourmet</title>
+    <!-- Google Fonts para tipografía elegante -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Encabezado de Navegación -->
+    <header class="navbar">
+        <div class="logo">Gusto & Fuego</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reservas">Reservaciones</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Sección de Bienvenida (Hero) -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <h1>Una Experiencia para los Sentidos</h1>
+            <p>Alta cocina con ingredientes locales y técnicas ancestrales.</p>
+            <a href="#menu" class="btn-primary">Explorar Menú</a>
+        </div>
+    </section>
+
+    <!-- Sección de Filtros de Menú Interactivo -->
+    <section id="menu" class="menu-section">
+        <h2>Nuestro Menú Gastronómico</h2>
+        <p class="section-subtitle">Selecciona una categoría para explorar</p>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-category="all">Todo</button>
+            <button class="filter-btn" data-category="entradas">Entradas</button>
+            <button class="filter-btn" data-category="fuertes">Platos Fuertes</button>
+            <button class="filter-btn" data-category="postres">Postres</button>
+        </div>
+
+        <div class="menu-grid" id="menu-gallery">
+            <!-- Los platos se renderizan dinámicamente con JavaScript -->
+        </div>
+    </section>
+
+    <!-- Sección de Reservas con Formulario -->
+    <section id="reservas" class="booking-section">
+        <div class="booking-container">
+            <div class="booking-info">
+                <h2>Reserva tu Mesa</h2>
+                <p>Asegura tu lugar en nuestra mesa principal. Para grupos de más de 8 personas, por favor contáctanos vía telefónica.</p>
+                <div class="info-item"><i class="fa-solid fa-phone"></i> +1 (234) 567-890</div>
+                <div class="info-item"><i class="fa-solid fa-envelope"></i> reservas@gustoyfuego.com</div>
+            </div>
+            
+            <form id="booking-form" class="booking-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" required placeholder="Ej. Juan Pérez">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date">Fecha</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Hora</label>
+                        <input type="time" id="time" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="guests">Número de Personas</label>
+                    <select id="guests" required>
+                        <option value="2">2 Personas</option>
+                        <option value="4">4 Personas</option>
+                        <option value="6">6 Personas</option>
+                        <option value="8">8 Personas</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Confirmar Reserva</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2026 Gusto & Fuego. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

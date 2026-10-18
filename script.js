@@ -22,7 +22,7 @@ const menuItems = [
         category: "fuertes",
         price: "\$34",
         desc: "Corte premium con reducción de vino tinto, trufa negra y puré rústico.",
-        img: "https://i.pinimg.com/1200x/0c/04/b1/0c04b1262e852afe55785f2b01fce9d5.jpg"
+        img: "https://i.pinimg.com/1200x/0c/04/b1/0c04b1262e852afe55785f2b01fce9d5.jpgs"
     },
     {
         id: 4,
@@ -30,7 +30,7 @@ const menuItems = [
         category: "fuertes",
         price: "\$29",
         desc: "Acompañado de espárragos tiernos, cítricos y reducción de miel silvestre.",
-        img: "https://i.pinimg.com/1200x/02/1c/81/021c8171228d699d6e84dc2c818c0271.jpg"
+        img: "https://i.pinimg.com/736x/42/56/15/425615cee8756bec1dbd863b3bdf650f.jpg"
     },
     {
         id: 5,

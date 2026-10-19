@@ -22,7 +22,7 @@ const menuItems = [
         category: "fuertes",
         price: "\$34",
         desc: "Corte premium con reducción de vino tinto, trufa negra y puré rústico.",
-        img: "https://i.pinimg.com/1200x/0c/04/b1/0c04b1262e852afe55785f2b01fce9d5.jpgs"
+        img: "https://i.pinimg.com/1200x/0c/04/b1/0c04b1262e852afe55785f2b01fce9d5.jpg"
     },
     {
         id: 4,
